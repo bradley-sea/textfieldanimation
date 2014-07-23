@@ -36,6 +36,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             })
     }
+    
+    func textFieldDidEndEditing(textField: UITextField!)  {
+        
+        UIView.animateWithDuration(0.3, animations:{ () -> Void
+            in
+            
+            self.view.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+            
+            })
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 
 }
